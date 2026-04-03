@@ -2,6 +2,7 @@
   <img src="apps/docs/public/favicon.svg" width="64" height="64" alt="Animated Icons Vue" />
   <h1>Animated Icons Vue</h1>
   <p>402+ beautiful animated SVG icons for Vue 3</p>
+  <p>Developed based on <b>Lucide Animated</b> and AI assistance, without relying on any libraries, using a pure CSS solution.</p>
 
   [![npm version](https://img.shields.io/npm/v/animated-icons-vue?style=flat-square&color=6366f1)](https://www.npmjs.com/package/animated-icons-vue)
   [![npm downloads](https://img.shields.io/npm/dm/animated-icons-vue?style=flat-square&color=22d3ee)](https://www.npmjs.com/package/animated-icons-vue)
