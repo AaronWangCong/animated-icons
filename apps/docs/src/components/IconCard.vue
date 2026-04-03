@@ -174,7 +174,7 @@ function viewSource() {
   width: 56px;
   height: 56px;
   border-radius: 8px;
-  background: linear-gradient(90deg, var(--bg-glass) 25%, var(--bg-glass-hover) 50%, var(--bg-glass) 75%);
+  background: linear-gradient(90deg, var(--bg-secondary) 25%, var(--border-color) 50%, var(--bg-secondary) 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
 }
@@ -257,9 +257,9 @@ function viewSource() {
   justify-content: center;
   width: 36px;
   height: 36px;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -268,8 +268,9 @@ function viewSource() {
 
 .action-btn:hover {
   background: var(--accent);
-  color: #0f172a;
+  color: #ffffff;
   transform: scale(1.15);
   border-color: transparent;
+  box-shadow: 0 4px 12px var(--accent-soft);
 }
 </style>
