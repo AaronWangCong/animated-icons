@@ -17,7 +17,7 @@
     }
   },
   "hooks": {
-    "after:bump": "pnpm --filter animated-icons-vue exec npm version ${version} --no-git-tag-version",
-    "after:release": "pnpm --filter animated-icons-vue publish --access public"
+    "after:bump": "cd packages/core && npm version ${version} --no-git-tag-version",
+    "after:release": "cd packages/core && npm publish --access public"
   }
 }
