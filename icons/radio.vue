@@ -1,0 +1,91 @@
+<script setup lang="ts">
+import { ref } from "vue";
+
+defineProps({
+  size: { type: Number, default: 28 },
+  color: { type: String, default: "currentColor" },
+  strokeWidth: { type: Number, default: 2 },
+  className: { type: String, default: "" },
+  active: { type: Boolean, default: false },
+});
+
+const isAnimating = ref(false);
+const isControlled = ref(false);
+
+function startAnimation() {
+  isControlled.value = true;
+  isAnimating.value = true;
+}
+
+function stopAnimation() {
+  isControlled.value = true;
+  isAnimating.value = false;
+}
+
+defineExpose({ startAnimation, stopAnimation });
+
+function handleMouseEnter() {
+  if (!isControlled.value) isAnimating.value = true;
+}
+
+function handleMouseLeave() {
+  if (!isControlled.value) isAnimating.value = false;
+}
+</script>
+
+<template>
+  <div
+    class="radio-icon"
+    :class="[className]"
+    v-bind="$attrs"
+    @mouseenter="handleMouseEnter"
+    @mouseleave="handleMouseLeave"
+  >
+      <svg xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                :height="size"
+                :stroke="color"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                :stroke-width="strokeWidth"
+                viewBox="0 0 24 24"
+                :width="size"
+              
+            :class="{ animating: isAnimating || active }">
+                <path
+                  d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"
+                  initial={{ opacity: 1 }}
+                />
+                <path
+                  d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"
+                  initial={{ opacity: 1 }}
+                />
+                <circle cx="12" cy="12" r="2" />
+                <path
+                  d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"
+                  initial={{ opacity: 1 }}
+                />
+                <path
+                  d="M19.1 4.9C23 8.8 23 15.1 19.1 19"
+                  initial={{ opacity: 1 }}
+                />
+              </svg>
+  </div>
+</template>
+
+<style scoped>
+.radio-icon {
+  display: inline-flex;
+}
+
+.radio-icon svg.animating {
+  animation: icon-anim 0.4s ease-in-out forwards;
+  transform-origin: center;
+}
+
+@keyframes icon-anim {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+</style>
