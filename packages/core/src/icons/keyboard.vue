@@ -50,11 +50,10 @@ function handleMouseLeave() {
                 :stroke-width="strokeWidth"
                 viewBox="0 0 24 24"
                 :width="size"
-              
+
                 :class="{ animating: isAnimating || active }">
                 <rect height="16" rx="2" width="20" x="2" y="4" />
-                <AnimatePresence>
-                  
+
       <path
                       d="M10 8h.01"
                     />
@@ -79,8 +78,7 @@ function handleMouseLeave() {
       <path
                       d="M8 12h.01"
                     />
-      
-                </AnimatePresence>
+
               </svg>
   </div>
 </template>

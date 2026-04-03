@@ -469,8 +469,8 @@ const filteredIcons = computed(() => {
 
 .icons-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .empty-state {
@@ -506,11 +506,25 @@ const filteredIcons = computed(() => {
   text-decoration: underline;
 }
 
-/* ===== Responsive ===== */
+@media (max-width: 1200px) {
+  .icons-grid {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+}
+@media (max-width: 900px) {
+  .icons-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
 @media (max-width: 640px) {
   .icons-grid {
-    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-    gap: 8px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .icons-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 </style>

@@ -41,22 +41,21 @@ function handleMouseLeave() {
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
   >
-      <svg xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                :height="size"
-                :stroke="color"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                :stroke-width="strokeWidth"
-                viewBox="0 0 24 24"
-                :width="size"
-              
-                :class="{ animating: isAnimating || active }">
-                <rect height="11" rx="2" ry="2" width="18" x="3" y="11" />
-                <path
-                  d="M7 11V7a5 5 0 0 1 10 0v4"
-                />
-              </svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      :height="size"
+      :stroke="color"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      :stroke-width="strokeWidth"
+      viewBox="0 0 24 24"
+      :width="size"
+      :class="{ animating: isAnimating || active }"
+    >
+      <rect height="11" rx="2" ry="2" width="18" x="3" y="11" />
+      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+    </svg>
   </div>
 </template>
 
@@ -65,10 +64,21 @@ function handleMouseLeave() {
   display: inline-flex;
 }
 
-.lock-icon svg.animating path, .lock-icon svg.animating circle, .lock-icon svg.animating line, .lock-icon svg.animating polyline { animation: icon-anim 1s ease-in-out forwards; }
+.lock-icon svg.animating path,
+.lock-icon svg.animating circle,
+.lock-icon svg.animating line,
+.lock-icon svg.animating polyline {
+  animation: icon-anim 1s ease-in-out forwards;
+}
 
 @keyframes icon-anim {
-  0% { stroke-dashoffset: 100; stroke-dasharray: 100; }
-  100% { stroke-dashoffset: 0; stroke-dasharray: 100; }
+  0% {
+    stroke-dashoffset: 100;
+    stroke-dasharray: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 100;
+  }
 }
 </style>
