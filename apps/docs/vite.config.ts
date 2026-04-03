@@ -8,7 +8,7 @@ export default defineConfig({
     alias: {
       '@': resolve(__dirname, 'src'),
       // 让 docs 直接引用根目录的 icons
-      '@icons': resolve(__dirname, '../../icons'),
+      '@icons': resolve(__dirname, '../../packages/core/src/icons'),
     },
   },
   server: {

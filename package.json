@@ -5,12 +5,26 @@
   "description": "Animated SVG icon library for Vue 3",
   "scripts": {
     "dev": "pnpm --filter docs dev",
-    "build": "pnpm --filter core build && pnpm --filter docs build",
-    "build:core": "pnpm --filter core build",
+    "build": "pnpm --filter animated-icons-vue build && pnpm --filter docs build",
+    "build:core": "pnpm --filter animated-icons-vue build",
     "build:docs": "pnpm --filter docs build",
-    "release": "pnpm --filter core build && pnpm --filter core publish --access public"
+    "release": "pnpm build:core && release-it",
+    "cz": "cz",
+    "prepare": "husky"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@release-it/conventional-changelog": "^10.0.6",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.1.7",
+    "release-it": "^19.2.4",
     "typescript": "^5.4.0"
   },
   "engines": {
