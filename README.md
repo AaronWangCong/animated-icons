@@ -9,7 +9,7 @@
   [![License: MIT](https://img.shields.io/badge/License-MIT-6366f1.svg?style=flat-square)](LICENSE)
   [![Vue 3](https://img.shields.io/badge/Vue-3.x-42b883?style=flat-square)](https://vuejs.org)
 
-  **[🌐 Live Preview](https://animated-icons.vercel.app)** · **[📦 npm](https://www.npmjs.com/package/animated-icons-vue)** · **[🐛 Issues](https://github.com/AaronWangCong/animated-icons/issues)**
+  **[🌐 Live Preview](https://animated-icons.pages.dev)** · **[📦 npm](https://www.npmjs.com/package/animated-icons-vue)** · **[🐛 Issues](https://github.com/AaronWangCong/animated-icons/issues)**
 </div>
 
 ---
